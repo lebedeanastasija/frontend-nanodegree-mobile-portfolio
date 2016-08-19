@@ -26,9 +26,6 @@
     tr {
         page-break-inside: avoid
     }
-    img {
-        max-width: 100%
-    }
     @page {
         margin: .5cm
     }
@@ -104,7 +101,6 @@ ul {
 }
 img {
     border: 0;
-    max-width: 100%
 }
 .container,
 footer,
