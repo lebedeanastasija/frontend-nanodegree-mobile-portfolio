@@ -13,23 +13,6 @@
       header {max-width: 45em;margin: 0 auto;padding: 0 .5em;color: #C90B0B}
       .hero {padding: 2em;background-color: #f8f8f8;font-size: 1.2em;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc}
     </style>
-     <script>
-      (function(w,g){w['GoogleAnalyticsObject']=g;
-      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};
-      w[g].l=1*new Date();})(window,'ga');
-      ga('create', 'UA-XXXX-Y');
-      ga('send', 'pageview');
-    </script>
-    <script>
-      function logCRP(){
-      var o=window.performance.timing,
-      n=o.domContentLoadedEventStart-o.domLoading,
-      t=o.domComplete-o.domLoading,
-      d=document.getElementById("crp-stats");
-      d.textContent="DCL: "+n+"ms, onload: "+t+"ms";
-      }
-      window.addEventListener("load",function(o){logCRP()});
-    </script>
   </head>
   <body>
     <header>
@@ -49,5 +32,21 @@
         <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
       </footer>
     </div>
+      <script>
+      (function(w,g){w['GoogleAnalyticsObject']=g;
+      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};
+      w[g].l=1*new Date();})(window,'ga');
+      ga('create', 'UA-XXXX-Y');
+      ga('send', 'pageview');
+
+      function logCRP(){
+      var o=window.performance.timing,
+      n=o.domContentLoadedEventStart-o.domLoading,
+      t=o.domComplete-o.domLoading,
+      d=document.getElementById("crp-stats");
+      d.textContent="DCL: "+n+"ms, onload: "+t+"ms";
+      }
+      window.addEventListener("load",function(o){logCRP()});
+    </script>
   </body>
 </html>
